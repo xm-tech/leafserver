@@ -9,11 +9,7 @@ import (
 )
 
 func init() {
-	register(&msg.Hello{}, onHello)
-}
-
-func register(m interface{}, h interface{}) {
-	skeleton.RegisterChanRPC(reflect.TypeOf(m), h)
+	skeleton.RegisterChanRPC(reflect.TypeOf(&msg.Hello{}), onHello)
 }
 
 func onHello(args []interface{}) {
