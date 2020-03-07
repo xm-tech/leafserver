@@ -1,0 +1,4 @@
+bin/log
+*.hprof
+*.tprof
+bin/nohup.out
